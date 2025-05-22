@@ -1,16 +1,16 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const path = require("path");
-const routes = require("./routes/index");
+const path = require('path');
 
-app.use(express.static(path.join(__dirname, "public")));
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "html");
-app.engine("html", require("ejs").renderFile);
+// Serve static files
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use("/", routes);
+// Serve HTML
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
 
-const PORT = 4411;
-app.listen(PORT, "localhost", () => {
-  console.log(`Server running at: http://localhost:${PORT}`);
+const PORT = process.env.PORT || 4411;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running at http://0.0.0.0:${PORT}`);
 });
