@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const properties = [
     {
-      title: "DTCP Approved Plot in Coimbatore",
-      location: "Coimbatore, Tamil Nadu",
+      title: "DTCP Approved Plot in Malayankulam",
+      location: "Malayankulam, Tamil Nadu",
       price: "Rs.40 Lakhs per Acker, Negotiable",
       status: "Available",
       description:
-        "Premium DTCP approved plots in Coimbatore surrounded by green landscapes.",
+        "Premium DTCP approved plots in Malayankulam surrounded by green landscapes.",
       images: [
         "/images/sample-property-1(1).jpg",
         "/images/sample-property-1(2).jpg",
